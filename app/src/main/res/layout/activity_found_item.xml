@@ -114,21 +114,21 @@
 
         <!-- PHOTO PREVIEW -->
 
+        <!-- ADD PHOTO BUTTON -->
+
         <ImageView
             android:id="@+id/imgItem"
             android:layout_width="0dp"
             android:layout_height="180dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="16dp"
             android:background="#D1D5DB"
-            android:scaleType="centerCrop"
             android:contentDescription="Found Item Photo"
-            android:src="@drawable/ic_launcher_background"
-            app:layout_constraintTop_toBottomOf="@id/edtContact"
+            android:padding="40dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/outline_camera_24"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
-
-        <!-- ADD PHOTO BUTTON -->
-
+            app:layout_constraintTop_toBottomOf="@id/edtContact" />
         <Button
             android:id="@+id/btnAddPhoto"
             android:layout_width="0dp"

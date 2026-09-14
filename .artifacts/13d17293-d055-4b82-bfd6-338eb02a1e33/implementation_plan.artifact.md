@@ -1,36 +1,31 @@
-# Implementation Plan - Fix Layout Reference & Modernize Adapter
+# Implementation Plan - Modern Vector Icons & Enhanced Frontend Design
 
-The goal is to fix the issue where the old design is showing instead of the new `item_layout.xml` and to enhance the Adapter to handle the new UI components.
-
-## User Review Required
-
-> [!IMPORTANT]
-> - **Layout Swap**: I will change `ItemAdapter.kt` to inflate `R.layout.item_layout` instead of `R.layout.singleitem`.
-> - **Badge Styling**: I will add UI logic to `onBindViewHolder` to dynamically set the background and text of `txtType` based on whether the item is "Lost" or "Found".
-> - **Delete Button**: I will bind `btnDelete` in the `ViewHolder`. Since you requested not to change the database logic, I will leave the click listener empty or as a placeholder, ensuring the ID remains valid.
+The goal is to create premium Android Vector Drawable icons (XML) for the application assets to replace generic system icons and plain text formatting, making the frontend look cohesive, clean, and highly professional.
 
 ## Proposed Changes
 
-### Adapter Fix
+### New Vector Assets [NEW]
+I will design and add the following high-quality vector icons under `app/src/main/res/drawable/`:
+- `ic_search_logo.xml`: A modern search/magnifying glass logo for the home dashboard screen.
+- `ic_description.xml`: A clean document/text icon for the item description field.
+- `ic_location.xml`: A modern map location pin to replace any simple unicode emoji indicators.
+- `ic_phone.xml`: A contemporary phone handset emblem for contact fields.
+- `ic_calendar.xml`: A clean calendar symbol for item reporting dates.
 
-#### [MODIFY] [ItemAdapter.kt](file:///C:/Users/sutha/AndroidStudioProjects/LostFound/app/src/main/java/com/example/lostfound/ItemAdapter.kt)
-- Update `onCreateViewHolder` to use `R.layout.item_layout`.
-- Update `MyViewHolder` to include `val btnDelete = itemView.findViewById<Button>(R.id.btnDelete)`.
-- Update `onBindViewHolder`:
-    - Set `txtItemName`, `txtDescription`, `txtLocation`, `txtContact` as before.
-    - Add logic for `txtType`:
-        - If "Lost" (case-insensitive): Set background to red (#E74C3C) and text to "LOST".
-        - If "Found" (case-insensitive): Set background to green (#2ECC71) and text to "FOUND".
+### Layout Refinements
 
-### Resource Consistency
+#### [MODIFY] [activity_main.xml](file:///C:/Users/sutha/AndroidStudioProjects/LostFound/app/src/main/res/layout/activity_main.xml)
+- Fix the duplicate `<ImageView android:id="@+id/imgSearch">` element declaration.
+- Change the source to the newly crafted `@drawable/ic_search_logo`.
+- Enhance tint colors and padding to give a unified presentation layer.
 
-#### [MODIFY] [colors.xml](file:///C:/Users/sutha/AndroidStudioProjects/LostFound/app/src/main/res/values/colors.xml)
-- Add the specific colors used in the layout and adapter (e.g., `colorLost`, `colorFound`) to ensure they are available as theme attributes or resources.
+#### [MODIFY] [item_layout.xml](file:///C:/Users/sutha/AndroidStudioProjects/LostFound/app/src/main/res/layout/item_layout.xml)
+- Update text label references or embed vector icons inline next to description, location, contact, and date fields to elevate visual hierarchy.
 
 ## Verification Plan
 
+### Automated Build Verification
+- Compile the resource files via Gradle to ensure XML path data syntax is 100% compliant with standard vector drawables.
+
 ### Manual Verification
-- Deploy the app and open the "VIEW ITEMS" screen.
-- Verify that the `MaterialCardView` design from `item_layout.xml` is now visible.
-- Verify that "Lost" items show a Red badge and "Found" items show a Green badge.
-- Verify that the item details (Description, Location, Contact) are correctly displayed under their respective labels.
+- Deploy the app to verify icon scaling, resolution independence, and high-contrast color matching.

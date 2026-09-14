@@ -186,11 +186,11 @@
         <ImageView
             android:id="@+id/imgItem"
             android:layout_width="168dp"
-            android:layout_height="114dp"
+            android:layout_height="147dp"
             android:layout_marginBottom="100dp"
             android:contentDescription="Item Photo"
             android:scaleType="centerCrop"
-            android:src="@drawable/ic_launcher_background"
+            android:src="@drawable/outline_camera_24"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
