@@ -14,7 +14,7 @@ The home screen features a clean dashboard grid with intuitive statistic indicat
 - 🟢 **REPORT FOUND ITEM** – Styled with a green/success theme for discovery.
 - 🔵 **VIEW ITEMS** – Styled with a blue/information theme to open the unified directory.
 
-<img width="221" height="459" alt="Main Dashboard" src="https://github.com/user-attachments/assets/49881ef3-6637-433d-9f63-7a63d0b562e0" />
+<img src="app/src/main/res/drawable/img_1.png" width="221" alt="Main Dashboard" />
 
 ### 📋 Unified Directory Card Layout (`item_layout.xml`)
 Every reported item from the SQLite database is automatically generated inside a structured `MaterialCardView` container with elevated borders and dedicated icons:
