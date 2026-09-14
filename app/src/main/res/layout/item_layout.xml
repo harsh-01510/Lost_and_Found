@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="12dp"
+    android:layout_marginEnd="12dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="6dp"
+    app:cardBackgroundColor="#FFFFFF"
+    app:strokeWidth="1dp"
+    app:strokeColor="#E0E0E0">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="18dp">
+
+        <!-- Item Name -->
+
+        <TextView
+            android:id="@+id/txtItemName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:text="Mobile"
+            android:textColor="#1F2937"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/txtType"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Lost / Found Type -->
+
+        <TextView
+            android:id="@+id/txtType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#E74C3C"
+            android:paddingStart="12dp"
+            android:paddingTop="6dp"
+            android:paddingEnd="12dp"
+            android:paddingBottom="6dp"
+            android:text="LOST"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Description Label -->
+
+        <TextView
+            android:id="@+id/txtDescriptionLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Description"
+            android:textColor="#6B7280"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtItemName" />
+
+        <!-- Description -->
+
+        <TextView
+            android:id="@+id/txtDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Black Phone"
+            android:textColor="#1F2937"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtDescriptionLabel" />
+
+        <!-- Location Label -->
+
+        <TextView
+            android:id="@+id/txtLocationLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="📍 Location"
+            android:textColor="#6B7280"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtDescription" />
+
+        <!-- Location -->
+
+        <TextView
+            android:id="@+id/txtLocation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="College"
+            android:textColor="#1F2937"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtLocationLabel" />
+
+        <!-- Contact Label -->
+
+        <TextView
+            android:id="@+id/txtContactLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="📞 Contact Number"
+            android:textColor="#6B7280"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtLocation" />
+
+        <!-- Contact -->
+
+        <TextView
+            android:id="@+id/txtContact"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="9662276383"
+            android:textColor="#1F2937"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtContactLabel" />
+
+        <!-- Reported Date -->
+
+        <TextView
+            android:id="@+id/txtDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Reported: 14/09/2026"
+            android:textColor="#6B7280"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtContact" />
+
+        <!-- Divider -->
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="14dp"
+            android:background="#E5E7EB"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtDate" />
+
+        <!-- Delete Button -->
+
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:backgroundTint="#E74C3C"
+            android:text="DELETE ITEM"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider" />
+
+        <!-- Item Photo -->
+
+        <ImageView
+            android:id="@+id/imgItem"
+            android:layout_width="168dp"
+            android:layout_height="114dp"
+            android:layout_marginBottom="100dp"
+            android:contentDescription="Item Photo"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_launcher_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
