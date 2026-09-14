@@ -4,6 +4,61 @@ A modern, clean, and intuitive Android application designed to help users report
 
 ---
 
+## 📱 Frontend Look & User Interface
+
+Here is a visual overview of the modern Material design applied across the frontend screens:
+
+### 🏠 Main Dashboard Launcher
+The home screen features a clean dashboard grid with intuitive statistic indicators and brightly colored action buttons:
+- 🔴 **REPORT LOST ITEM** – Styled with a red/danger theme for urgency.
+- 🟢 **REPORT FOUND ITEM** – Styled with a green/success theme for discovery.
+- 🔵 **VIEW ITEMS** – Styled with a blue/information theme to open the unified directory.
+
+```
+┌──────────────────────────────────────────┐
+│               🔍 LOST & FOUND            │
+│          "Find what matters to you"      │
+│                                          │
+│  ┌──────────────────┐  ┌──────────────┐  │
+│  │   TOTAL ITEMS    │  │  LOST ITEMS  │  │
+│  │        🔢 5      │  │     🔴 3     │  │
+│  └──────────────────┘  └──────────────┘  │
+│  ┌────────────────────────────────────┐  │
+│  │            FOUND ITEMS             │  │
+│  │                🟢 2                │  │
+│  └────────────────────────────────────┘  │
+│                                          │
+│  [ REPORT LOST ITEM ]  -> (Red Theme)    │
+│  [ REPORT FOUND ITEM ] -> (Green Theme)  │
+│  [ VIEW ITEMS ]        -> (Blue Theme)   │
+└──────────────────────────────────────────┘
+```
+
+### 📋 Unified Directory Card Layout (`item_layout.xml`)
+Every reported item from the SQLite database is automatically generated inside a structured `MaterialCardView` container with elevated borders and dedicated icons:
+
+```
+┌──────────────────────────────────────────┐
+│ 📦 Mobile                         LOST 🔴│
+│                                          │
+│ 📝 Description                           │
+│ Black smartphone with a cracked screen   │
+│                                          │
+│ 📍 Location                              │
+│ College Library - Second Floor           │
+│                                          │
+│ 📞 Contact Number                        │
+│ +1 (555) 019-2834                        │
+│                                          │
+│ 📅 Reported Date                         │
+│ 14/09/2026                               │
+│ ──────────────────────────────────────── │
+│ [ 🗑️ DELETE ITEM ]                       │
+└──────────────────────────────────────────┘
+```
+
+---
+
 ## 🚀 Features
 
 - **Dashboard**: Simple and professional home screen with distinct color-coded actions.
@@ -32,7 +87,7 @@ A modern, clean, and intuitive Android application designed to help users report
 This application strictly leverages `androidx.constraintlayout.widget.ConstraintLayout` inside all layouts to satisfy contemporary fluid layout principles and college course requirements.
 
 ### Component Layout Hierarchy:
-- `activity_main.xml`: Main dashboard launcher area.
+- `activity_main.xml`: Main dashboard launcher area with stat summary blocks.
 - `activity_view_items.xml`: Interactive search panel with directory list layout.
 - `item_layout.xml`: Individual item blueprint styled using nested `MaterialCardView` containers.
 - `activity_lost_item.xml` & `activity_found_item.xml`: Dynamic, user-friendly form input containers.
