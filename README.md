@@ -15,23 +15,8 @@ The home screen features a clean dashboard grid with intuitive statistic indicat
 - 🔵 **VIEW ITEMS** – Styled with a blue/information theme to open the unified directory.
 
 ```
-┌──────────────────────────────────────────┐
-│               🔍 LOST & FOUND            │
-│          "Find what matters to you"      │
-│                                          │
-│  ┌──────────────────┐  ┌──────────────┐  │
-│  │   TOTAL ITEMS    │  │  LOST ITEMS  │  │
-│  │        🔢 5      │  │     🔴 3     │  │
-│  └──────────────────┘  └──────────────┘  │
-│  ┌────────────────────────────────────┐  │
-│  │            FOUND ITEMS             │  │
-│  │                🟢 2                │  │
-│  └────────────────────────────────────┘  │
-│                                          │
-│  [ REPORT LOST ITEM ]  -> (Red Theme)    │
-│  [ REPORT FOUND ITEM ] -> (Green Theme)  │
-│  [ VIEW ITEMS ]        -> (Blue Theme)   │
-└──────────────────────────────────────────┘
+<img width="221" height="459" alt="image" src="https://github.com/user-attachments/assets/49881ef3-6637-433d-9f63-7a63d0b562e0" />
+
 ```
 
 ### 📋 Unified Directory Card Layout (`item_layout.xml`)
